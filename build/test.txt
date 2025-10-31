@@ -1,0 +1,3 @@
+docker run --rm -p 8888:8888 --name jupyter-test <your image name>
+docker exec -it jupyter-test bash
+git clone <your-git-repo-for-the-notebook>

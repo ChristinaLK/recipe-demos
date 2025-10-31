@@ -1,0 +1,6 @@
+- title: Recipe - process folder of files
+  description: Processing a folder of files with a Python script
+  source: /home/joyvan/recipe-demos/python-process-folder.ipynb
+  type: notebook
+  catalog: "Notebook"
+  icon: /opt/conda/share/jupyter/jupyter_app_launcher/folder.png
