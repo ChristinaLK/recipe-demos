@@ -1,6 +1,14 @@
-- title: Recipe - process folder of files
-  description: Processing a folder of files with a Python script
-  source: /home/jovyan/recipe-demos/python-process-folder.ipynb
-  type: notebook
+- title: Go to correct directory
+  description: Going to correct folder
+  icon: recipe-demos/build/folder.png
+  type: jupyterlab-commands
+  source:
+    - label: Go to path
+      id: 'filebrowser:go-to-path'
+      args:
+        path: recipe-demos
+    - label: Open notebook
+      id: 'filebrowser:open-path'
+      args: 
+        path: recipe-demos/python-process-folder.ipynb
   catalog: "Notebook"
-  icon: /opt/conda/share/jupyter/jupyter_app_launcher/folder.png
