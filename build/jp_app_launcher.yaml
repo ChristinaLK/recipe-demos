@@ -1,6 +1,57 @@
+# Launcher cards for JupyterLab (jupyter_app_launcher).
+# Icon paths are relative to this file's directory inside the image
+# (/opt/conda/share/jupyter/jupyter_app_launcher) and must be SVG.
+# NOTE: keep `catalog` out of "Notebook"/"Console" - JupyterLab treats those as kernel
+# sections and shows the label's first letter on the card instead of the icon.
+- title: Select a Tutorial
+  description: Choose a tutorial to download and open
+  icon: tutorials.svg
+  type: jupyterlab-commands
+  # Every command in `source` needs an `args` key (use {} if none), otherwise
+  # jupyter_app_launcher's schema check silently drops the whole card.
+  source:
+    - label: Go to path
+      id: 'filebrowser:go-to-path'
+      args:
+        path: recipe-demos
+    # Open with an explicit kernel (spec name from this image) so nothing below
+    # ever prompts "Select Kernel".
+    - label: Open notebook
+      id: 'docmanager:open'
+      args:
+        path: recipe-demos/select-tutorial.ipynb
+        kernel:
+          name: conda-base-py
+    # restart-kernel is the only built-in command that waits for the session to
+    # be attached; the confirmation prompt is disabled in overrides.json.
+    - label: Wait for kernel
+      id: 'notebook:restart-kernel'
+      args: {}
+    # By now the notebook content is loaded, so this runs the real cells and
+    # renders the tiles.
+    - label: Render tiles
+      id: 'notebook:run-all-cells'
+      args: {}
+  catalog: "HTC Recipes"
+
+- title: Getting Started
+  description: Getting started with the OSPool
+  icon: rocket.svg
+  type: jupyterlab-commands
+  source:
+    - label: Go to path
+      id: 'filebrowser:go-to-path'
+      args:
+        path: recipe-demos
+    - label: Open notebook
+      id: 'filebrowser:open-path'
+      args:
+        path: recipe-demos/getting-started-ospool.ipynb
+  catalog: "HTC Recipes"
+
 - title: Go to correct directory
   description: Going to correct folder
-  icon: recipe-demos/build/folder.png
+  icon: folder.svg
   type: jupyterlab-commands
   source:
     - label: Go to path
@@ -11,4 +62,4 @@
       id: 'filebrowser:open-path'
       args: 
         path: recipe-demos/python-process-folder.ipynb
-  catalog: "Notebook"
+  catalog: "HTC Recipes"

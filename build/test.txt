@@ -1,3 +1,14 @@
-docker run --rm -p 8888:8888 --name jupyter-test <your image name>
+# Build (base image is amd64-only; on Apple Silicon you need --platform)
+docker build --platform linux/amd64 -t recipe-demos:latest build/
+
+# Run, mounting this repo where the launcher buttons expect it (~/recipe-demos)
+docker run -d --rm --platform linux/amd64 -p 8888:8888 --name jupyter-test \
+  -v "$PWD":/home/jovyan/recipe-demos recipe-demos:latest
+docker logs jupyter-test        # copy the http://localhost:8888/lab?token=... URL
+
+# Poke around / stop
 docker exec -it jupyter-test bash
-git clone <your-git-repo-for-the-notebook>
+docker stop jupyter-test
+
+# Alternative to the bind mount: run without -v, then inside the container
+#   git clone <your-git-repo-for-the-notebook>   # into /home/jovyan/recipe-demos

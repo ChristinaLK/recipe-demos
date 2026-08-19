@@ -1,0 +1,5 @@
+{
+  "@jupyterlab/apputils-extension:sessionDialogs": {
+    "skipKernelRestartDialog": true
+  }
+}

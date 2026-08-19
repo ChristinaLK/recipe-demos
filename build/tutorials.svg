@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+  <!-- "Select a Tutorial" icon: a 2x2 grid of tiles, one highlighted. jp-icon* classes follow the JupyterLab theme. -->
+  <g class="jp-icon3" fill="#616161">
+    <rect x="3" y="3" width="8" height="8" rx="1.5"/>
+    <rect x="13" y="3" width="8" height="8" rx="1.5"/>
+    <rect x="3" y="13" width="8" height="8" rx="1.5"/>
+  </g>
+  <!-- selected tile -->
+  <rect class="jp-icon-brand0" fill="#1976d2" x="13" y="13" width="8" height="8" rx="1.5"/>
+</svg>

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+  <!-- Rocket icon. jp-icon* classes make it follow the JupyterLab theme (fill attrs are fallbacks). -->
+  <g class="jp-icon3" fill="#616161">
+    <!-- body -->
+    <path d="M12 1.5C9.8 3.6 8.6 6.6 8.6 10v5.2c0 .5.3.8.8.8h5.2c.5 0 .8-.3.8-.8V10c0-3.4-1.2-6.4-3.4-8.5z"/>
+    <!-- left fin -->
+    <path d="M8.6 11.5 5.2 14.6v3.8l3.4-2z"/>
+    <!-- right fin -->
+    <path d="M15.4 11.5l3.4 3.1v3.8l-3.4-2z"/>
+  </g>
+  <!-- window (cut-out look: uses the layout/background color) -->
+  <circle class="jp-icon-accent2" fill="#fff" cx="12" cy="9.2" r="1.7"/>
+  <!-- exhaust flame -->
+  <path class="jp-icon-warn0" fill="#f57c00" d="M10.2 17h3.6L12 22.5z"/>
+</svg>

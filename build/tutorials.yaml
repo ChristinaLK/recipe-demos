@@ -1,0 +1,31 @@
+# Tutorials shown as tiles on select-tutorial.ipynb.
+# To add one, append an entry with:
+#   title       - shown on the tile
+#   emoji       - big icon on the tile
+#   description - one or two sentences shown on the tile
+#   repo        - git clone URL of a repo that contains notebooks
+#   notebook    - path (inside the repo) of the notebook to open first
+
+- title: Word Frequency
+  emoji: "📚"
+  description: "Submit many jobs at once: count word frequencies across a set of classic books."
+  repo: "https://github.com/osg-htc/tutorial-wordfreq.git"
+  notebook: "Wordfreq_Tutorial.ipynb"
+
+- title: Containers
+  emoji: "📦"
+  description: "Bring your own software to OSPool jobs using Apptainer / Docker containers."
+  repo: "https://github.com/osg-htc/tutorial-containers.git"
+  notebook: "tutorial-containers.ipynb"
+
+- title: PyTorch Workflow
+  emoji: "🔥"
+  description: "Develop, deploy, and run inference for a PyTorch model on the OSPool."
+  repo: "https://github.com/osg-htc/tutorial-pytorch-workflow.git"
+  notebook: "01-Introduction.ipynb"
+
+- title: HTCondor Python Bindings
+  emoji: "🐍"
+  description: "Submit and manage HTCondor jobs from Python with the htcondor bindings."
+  repo: "https://github.com/htcondor/htcondor-python-bindings-tutorials.git"
+  notebook: "tutorials/index.ipynb"
