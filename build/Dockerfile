@@ -4,6 +4,8 @@ USER $NB_UID:$NB_GID
 
 RUN python3 -m pip install jupyter_app_launcher ipywidgets pyyaml
 RUN mkdir /opt/conda/share/jupyter/jupyter_app_launcher
+RUN jupyter labextension disable @jupyterlab/console-extension
+RUN git clone https://github.com/osg-htc/welcome-notebooks welcome
 COPY jp_app_launcher.yaml /opt/conda/share/jupyter/jupyter_app_launcher/jp_app_launcher.yaml
 COPY folder.svg /opt/conda/share/jupyter/jupyter_app_launcher/folder.svg
 COPY rocket.svg /opt/conda/share/jupyter/jupyter_app_launcher/rocket.svg

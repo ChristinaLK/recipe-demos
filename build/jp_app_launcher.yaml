@@ -13,13 +13,13 @@
     - label: Go to path
       id: 'filebrowser:go-to-path'
       args:
-        path: recipe-demos
+        path: welcome
     # Open with an explicit kernel (spec name from this image) so nothing below
     # ever prompts "Select Kernel".
     - label: Open notebook
       id: 'docmanager:open'
       args:
-        path: recipe-demos/select-tutorial.ipynb
+        path: welcome/select-tutorial.ipynb
         kernel:
           name: conda-base-py
     # restart-kernel is the only built-in command that waits for the session to
@@ -32,7 +32,7 @@
     - label: Render tiles
       id: 'notebook:run-all-cells'
       args: {}
-  catalog: "HTC Recipes"
+  catalog: "HTC Catalog"
 
 - title: Getting Started
   description: Getting started with the OSPool
@@ -42,24 +42,10 @@
     - label: Go to path
       id: 'filebrowser:go-to-path'
       args:
-        path: recipe-demos
+        path: welcome
     - label: Open notebook
       id: 'filebrowser:open-path'
       args:
-        path: recipe-demos/getting-started-ospool.ipynb
-  catalog: "HTC Recipes"
+        path: welcome/getting-started-ospool.ipynb
+  catalog: "HTC Catalog"
 
-- title: Go to correct directory
-  description: Going to correct folder
-  icon: folder.svg
-  type: jupyterlab-commands
-  source:
-    - label: Go to path
-      id: 'filebrowser:go-to-path'
-      args:
-        path: recipe-demos
-    - label: Open notebook
-      id: 'filebrowser:open-path'
-      args: 
-        path: recipe-demos/python-process-folder.ipynb
-  catalog: "HTC Recipes"
